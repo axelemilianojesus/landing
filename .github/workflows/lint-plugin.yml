@@ -1,0 +1,33 @@
+name: Lint Plugin
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint_plugin:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: Install Dependencies
+        working-directory: plugins/faustwp
+        run: composer install
+      - name: Run Lint
+        working-directory: plugins/faustwp
+        run: composer lint
+      - name: Run PHPCS
+        working-directory: plugins/faustwp
+        run: composer phpcs
+      - name: Run PHPStan
+        run: composer phpstan
+        working-directory: plugins/faustwp
