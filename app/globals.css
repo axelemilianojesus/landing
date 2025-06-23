@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: 37, 38, 40; /* #252628 */
+  --background: 255, 255, 255;
+  --background-end: 250, 250, 250;
+  --primary: 255, 53, 53; /* #FF3535 */
+  --primary-dark: 200, 30, 30; /* #C81E1E */
+  --secondary: 37, 38, 40; /* #252628 */
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-kanit);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p,
+  span,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font-family: var(--font-mulish);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Usar un color de fondo sólido en lugar de una imagen para el hero */
+.hero-bg {
+  background-color: #ff3535;
+  position: relative;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255, 53, 53, 0.9), rgba(200, 30, 30, 0.9));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
