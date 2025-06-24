@@ -39,6 +39,241 @@ export default function Home() {
         <div className="absolute top-40 left-1/4 w-16 h-16 bg-white/10 animate-spin"></div>
       </section>
 
+      {/* Productos Destacados Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-kanit font-bold mb-6 text-secondary">Productos Destacados</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-mulish">
+              Descubre nuestros productos más vendidos con los mejores precios y promociones especiales.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* Producto 1 */}
+            <div className="bg-white border border-gray-200 shadow-lg overflow-hidden relative group">
+              <div className="absolute top-4 left-4 z-10">
+                <div className="bg-orange-500 text-white px-3 py-1 text-sm font-kanit font-bold">30% OFF</div>
+              </div>
+              <div className="absolute top-4 right-4 z-10">
+                <div className="bg-gray-600 text-white px-2 py-1 text-xs font-mulish">20 lts</div>
+              </div>
+              <div className="p-6">
+                <Image
+                  src="/images/pintura-hogar.jpeg"
+                  alt="Sherwin Williams Loxon"
+                  width={300}
+                  height={300}
+                  className="w-full h-48 object-cover mb-4"
+                />
+                <h3 className="text-lg font-kanit font-semibold text-secondary mb-2">SHERWIN WILLIAMS</h3>
+                <p className="text-gray-600 font-mulish mb-4">
+                  Látex Interior Loxon Larga Duración Mate Blanco 20 Litros
+                </p>
+                <div className="mb-4">
+                  <span className="text-gray-400 line-through text-sm font-mulish">$247.856,00</span>
+                  <div className="text-2xl font-kanit font-bold text-orange-500">$173.499,00</div>
+                  <p className="text-sm text-gray-600 font-mulish">3 Cuotas sin interés de $57.833</p>
+                </div>
+                <div className="bg-orange-100 text-orange-600 px-3 py-1 text-sm font-mulish inline-block mb-4">
+                  Retiro en 2 hs
+                </div>
+              </div>
+            </div>
+
+            {/* Producto 2 */}
+            <div className="bg-white border border-gray-200 shadow-lg overflow-hidden relative group">
+              <div className="absolute top-4 left-4 z-10">
+                <div className="bg-orange-500 text-white px-3 py-1 text-sm font-kanit font-bold">20% OFF</div>
+              </div>
+              <div className="absolute top-4 right-4 z-10">
+                <div className="bg-gray-600 text-white px-2 py-1 text-xs font-mulish">20 lts</div>
+              </div>
+              <div className="p-6">
+                <Image
+                  src="/images/pintura-hogar2.jpeg"
+                  alt="Alba Albalatex"
+                  width={300}
+                  height={300}
+                  className="w-full h-48 object-cover mb-4"
+                />
+                <h3 className="text-lg font-kanit font-semibold text-secondary mb-2">ALBA</h3>
+                <p className="text-gray-600 font-mulish mb-4">Látex Interior Albalatex Mate Blanco 20 Litros</p>
+                <div className="mb-4">
+                  <span className="text-gray-400 line-through text-sm font-mulish">$174.987,00</span>
+                  <div className="text-2xl font-kanit font-bold text-orange-500">$139.990,00</div>
+                  <p className="text-sm text-gray-600 font-mulish">3 Cuotas sin interés de $46.663</p>
+                </div>
+                <div className="bg-orange-100 text-orange-600 px-3 py-1 text-sm font-mulish inline-block mb-4">
+                  Retiro en 2 hs
+                </div>
+              </div>
+            </div>
+
+            {/* Producto 3 */}
+            <div className="bg-white border border-gray-200 shadow-lg overflow-hidden relative group">
+              <div className="absolute top-4 left-4 z-10">
+                <div className="bg-orange-500 text-white px-3 py-1 text-sm font-kanit font-bold">30% OFF</div>
+              </div>
+              <div className="absolute top-4 right-4 z-10">
+                <div className="bg-gray-600 text-white px-2 py-1 text-xs font-mulish">20 lts</div>
+              </div>
+              <div className="p-6">
+                <Image
+                  src="/images/pintura-industrial.jpeg"
+                  alt="Sherwin Williams Pro 700"
+                  width={300}
+                  height={300}
+                  className="w-full h-48 object-cover mb-4"
+                />
+                <h3 className="text-lg font-kanit font-semibold text-secondary mb-2">SHERWIN WILLIAMS</h3>
+                <p className="text-gray-600 font-mulish mb-4">Látex Interior Pro 700 Mate Blanco 20 Litros</p>
+                <div className="mb-4">
+                  <span className="text-gray-400 line-through text-sm font-mulish">$114.270,00</span>
+                  <div className="text-2xl font-kanit font-bold text-orange-500">$79.989,00</div>
+                  <p className="text-sm text-gray-600 font-mulish">3 Cuotas sin interés de $26.663</p>
+                </div>
+                <div className="bg-orange-100 text-orange-600 px-3 py-1 text-sm font-mulish inline-block mb-4">
+                  Retiro en 2 hs
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button className="inline-flex items-center justify-center text-sm font-kanit font-medium bg-primary text-white hover:bg-primary-dark h-12 py-3 px-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              Ver todos los productos
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Grid Metro de Ofertas y Categorías */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-kanit font-bold mb-6 text-secondary">Ofertas y Promociones</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-mulish">
+              Aprovecha nuestras promociones especiales y descuentos exclusivos.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-auto">
+            {/* Promoción Principal - Ocupa 2 columnas */}
+            <div className="md:col-span-2 bg-gradient-to-r from-red-400 to-red-500 text-white p-8 relative overflow-hidden min-h-[300px] flex flex-col justify-center">
+              <div className="relative z-10">
+                <h3 className="text-3xl font-kanit font-bold mb-4">Creá momentos especiales</h3>
+                <p className="text-lg font-mulish mb-6">Sorprendelo con el mejor regalo</p>
+                <div className="bg-white text-red-500 px-4 py-2 inline-block mb-4">
+                  <span className="text-3xl font-kanit font-bold">40% OFF</span>
+                </div>
+                <div className="bg-blue-600 text-white px-4 py-2 inline-block mb-4">
+                  <span className="font-kanit font-bold">6 cuotas sin interés</span>
+                  <br />
+                  <span className="text-sm">con bancos seleccionados</span>
+                </div>
+                <button className="bg-white text-red-500 px-4 py-2 font-kanit font-medium hover:bg-gray-100 transition-colors">
+                  ver más
+                </button>
+              </div>
+              <div className="absolute right-0 top-0 w-1/2 h-full opacity-20">
+                <Image src="/images/pintura-home-03.jpeg" alt="Promoción" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Calefacción */}
+            <div className="bg-gradient-to-br from-teal-400 to-teal-500 text-white p-6 relative overflow-hidden min-h-[300px] flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-kanit font-bold mb-4">Calefacción</h3>
+                <div className="bg-white text-teal-500 px-3 py-1 inline-block mb-2">
+                  <span className="text-2xl font-kanit font-bold">30% OFF</span>
+                </div>
+                <div className="bg-blue-600 text-white px-3 py-1 inline-block text-sm mb-4">+10% extra con BBVA</div>
+                <div className="bg-white/20 text-white px-3 py-1 inline-block mb-4">
+                  <span className="font-kanit font-bold">6 cuotas sin interés</span>
+                </div>
+              </div>
+              <button className="bg-white text-teal-500 px-3 py-1 text-sm font-kanit font-medium self-start">
+                ver más
+              </button>
+            </div>
+
+            {/* Banco Provincia */}
+            <div className="bg-gradient-to-br from-orange-400 to-orange-500 text-white p-6 flex flex-col justify-center items-center text-center min-h-[200px]">
+              <div className="bg-white text-orange-500 p-4 mb-4 w-full">
+                <h3 className="text-lg font-kanit font-bold mb-2">Banco Provincia</h3>
+                <div className="text-4xl font-kanit font-bold text-gray-700">4</div>
+                <div className="text-lg font-kanit font-bold text-gray-700">cuotas sin interés</div>
+              </div>
+            </div>
+
+            {/* Lanzamiento Textura */}
+            <div className="md:col-span-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 relative overflow-hidden min-h-[250px] flex items-center">
+              <div className="w-1/2">
+                <div className="bg-orange-400 text-white px-3 py-1 inline-block mb-2 text-sm font-kanit font-bold">
+                  ¡LANZAMIENTO!
+                </div>
+                <h3 className="text-3xl font-kanit font-bold mb-2">¿Textura o color?</h3>
+                <p className="text-xl font-kanit font-bold mb-4">Elegí los dos.</p>
+              </div>
+              <div className="w-1/2 flex justify-center">
+                <Image
+                  src="/images/wooden-paint-brushes.jpeg"
+                  alt="Productos de textura"
+                  width={200}
+                  height={150}
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Pádel */}
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-kanit font-bold mb-4">Pádel</h3>
+                <div className="bg-white text-blue-500 px-3 py-1 inline-block mb-4">
+                  <span className="text-2xl font-kanit font-bold">40% OFF</span>
+                  <div className="text-sm">en seleccionados</div>
+                </div>
+              </div>
+              <button className="bg-white text-blue-500 px-3 py-1 text-sm font-kanit font-medium self-start">
+                ver más
+              </button>
+              <div className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-30">
+                <Image src="/images/piscinas-2.jpeg" alt="Pádel" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Todas las opciones de látex */}
+            <div className="bg-gradient-to-br from-purple-400 to-purple-500 text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-kanit font-bold mb-4">Todas las opciones de látex</h3>
+                <div className="bg-orange-500 text-white px-3 py-1 inline-block mb-2 text-sm">
+                  Desde $29.990 + hasta 6 cuotas sin interés
+                </div>
+              </div>
+              <button className="bg-white text-purple-500 px-3 py-1 text-sm font-kanit font-medium self-start">
+                ver más
+              </button>
+            </div>
+
+            {/* Preparación de superficies */}
+            <div className="bg-gradient-to-br from-red-400 to-red-500 text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-kanit font-bold mb-4">Preparación de superficies</h3>
+                <div className="bg-orange-500 text-white px-3 py-1 inline-block mb-2 text-sm">
+                  Desde $26.990 + hasta 6 cuotas sin interés
+                </div>
+              </div>
+              <button className="bg-white text-red-500 px-3 py-1 text-sm font-kanit font-medium self-start">
+                ver más
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
