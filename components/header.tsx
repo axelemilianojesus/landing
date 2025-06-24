@@ -66,9 +66,9 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Todo Color Pinturerías"
-                width={180}
-                height={60}
-                className={`transition-all duration-300 ${isScrolled ? "h-10" : "h-14"} w-auto brightness-0 invert`}
+                width={252}
+                height={84}
+                className={`transition-all duration-300 ${isScrolled ? "h-14" : "h-20"} w-auto`}
               />
             </Link>
 

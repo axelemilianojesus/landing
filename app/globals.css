@@ -26,7 +26,7 @@ body {
   h6 {
     font-family: var(--font-kanit);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.7px;
   }
 
   p,
@@ -37,13 +37,13 @@ body {
   textarea,
   select {
     font-family: var(--font-mulish);
-    letter-spacing: -0.01em;
+    letter-spacing: 0.7px;
   }
 }
 
 /* Usar un color de fondo sólido en lugar de una imagen para el hero */
 .hero-bg {
-  background-color: #ff3535;
+  background: linear-gradient(to bottom, #fb3234, #c81e1e);
   position: relative;
 }
 
@@ -54,7 +54,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(255, 53, 53, 0.9), rgba(200, 30, 30, 0.9));
+  background: linear-gradient(to bottom, rgba(251, 50, 52, 0.9), rgba(200, 30, 30, 0.9));
   z-index: 1;
 }
 

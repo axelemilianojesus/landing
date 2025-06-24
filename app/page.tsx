@@ -161,7 +161,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-auto">
             {/* Promoción Principal - Ocupa 2 columnas */}
-            <div className="md:col-span-2 bg-gradient-to-r from-red-400 to-red-500 text-white p-8 relative overflow-hidden min-h-[300px] flex flex-col justify-center">
+            <div className="md:col-span-2 bg-gradient-to-b from-[#FB3234] to-[#C81E1E] text-white p-8 relative overflow-hidden min-h-[300px] flex flex-col justify-center">
               <div className="relative z-10">
                 <h3 className="text-3xl font-kanit font-bold mb-4">Creá momentos especiales</h3>
                 <p className="text-lg font-mulish mb-6">Sorprendelo con el mejor regalo</p>
@@ -228,25 +228,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Pádel */}
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
-              <div>
-                <h3 className="text-2xl font-kanit font-bold mb-4">Pádel</h3>
-                <div className="bg-white text-blue-500 px-3 py-1 inline-block mb-4">
-                  <span className="text-2xl font-kanit font-bold">40% OFF</span>
-                  <div className="text-sm">en seleccionados</div>
-                </div>
-              </div>
-              <button className="bg-white text-blue-500 px-3 py-1 text-sm font-kanit font-medium self-start">
-                ver más
-              </button>
-              <div className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-30">
-                <Image src="/images/piscinas-2.jpeg" alt="Pádel" fill className="object-cover" />
-              </div>
-            </div>
+            {/* Preparación de superficies */}
+            
 
             {/* Todas las opciones de látex */}
-            <div className="bg-gradient-to-br from-purple-400 to-purple-500 text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
+            <div className="bg-gradient-to-b from-[#FB3234] to-[#C81E1E] text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-kanit font-bold mb-4">Todas las opciones de látex</h3>
                 <div className="bg-orange-500 text-white px-3 py-1 inline-block mb-2 text-sm">
@@ -326,7 +312,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
-            {["Mendoza Capital", "Godoy Cruz", "Las Heras", "Guaymallén", "Luján de Cuyo", "Maipú", "San Rafael"].map(
+            {["Mendoza Capital", "Godoy Cruz", "Las Heras", "Guaymallén", "Luján de Cuyo", "Maipú Centro", "Maipú"].map(
               (location, index) => (
                 <div
                   key={index}

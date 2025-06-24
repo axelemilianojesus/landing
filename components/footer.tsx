@@ -12,9 +12,9 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Todo Color Pinturerías"
-                width={180}
-                height={60}
-                className="h-16 w-auto mb-6 brightness-0 invert"
+                width={252}
+                height={84}
+                className="h-20 w-auto mb-6"
               />
               <p className="text-white/90 mt-4 font-mulish">
                 La cadena de pinturerías más grande de Mendoza y Cuyo. Especialistas con más de 20 años de experiencia
