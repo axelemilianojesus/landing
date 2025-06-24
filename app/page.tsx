@@ -80,7 +80,7 @@ export default function Home() {
       {/* Banner de Sucursales */}
       <section className="py-16 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <Image src="/images/pintura-industrial.jpeg" alt="Fondo de sucursales" fill className="object-cover" />
+          <Image src="/images/pintar-casa-profesional.jpeg" alt="Fondo de sucursales" fill className="object-cover" />
         </div>
         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
           <div className="text-center mb-10">
@@ -304,17 +304,24 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((brand) => (
+            {[
+              { name: "Sucursal Capital", image: "/images/local.jpeg" },
+              { name: "Sucursal Godoy Cruz", image: "/images/pintura-hogar.jpeg" },
+              { name: "Sucursal Las Heras", image: "/images/pintura-hogar2.jpeg" },
+              { name: "Sucursal Guaymallén", image: "/images/pintura-industrial.jpeg" },
+              { name: "Sucursal Luján", image: "/images/pintura-home-03.jpeg" },
+              { name: "Sucursal Maipú", image: "/images/wooden-paint-brushes.jpeg" },
+            ].map((branch, index) => (
               <div
-                key={brand}
+                key={index}
                 className="bg-white p-6 shadow-md flex items-center justify-center h-32 transition-all duration-300 hover:shadow-lg"
               >
                 <Image
-                  src="/placeholder.svg?height=80&width=120"
-                  alt={`Marca ${brand}`}
+                  src={branch.image || "/placeholder.svg"}
+                  alt={branch.name}
                   width={120}
                   height={80}
-                  className="max-h-16 w-auto"
+                  className="max-h-16 w-auto object-cover rounded"
                 />
               </div>
             ))}
@@ -324,7 +331,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 bg-secondary relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pintura-home-03.jpeg')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/piscinas-2.jpeg')] bg-cover bg-center opacity-10"></div>
         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-kanit font-bold text-white mb-6">
             ENVÍOS A TODO MENDOZA Y 7 SUCURSALES
@@ -425,38 +432,68 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-8">
             {[
-              "#FF3535",
-              "#FF5757",
-              "#FF7979",
-              "#FFB6B6",
-              "#3535FF",
-              "#5757FF",
-              "#7979FF",
-              "#B6B6FF",
-              "#35FF35",
-              "#57FF57",
-              "#79FF79",
-              "#B6FFB6",
-              "#FFFF35",
-              "#FFFF57",
-              "#FFFF79",
-              "#FFFFB6",
-              "#FF35FF",
-              "#FF57FF",
-              "#FF79FF",
-              "#FFB6FF",
-              "#35FFFF",
-              "#57FFFF",
-              "#79FFFF",
-              "#B6FFFF",
-              "#FF8C35",
-              "#FFAE57",
-              "#FFD079",
-              "#FFE2B6",
-              "#8C35FF",
-              "#AE57FF",
-              "#D079FF",
-              "#E2B6FF",
+              "#FFFFFF", // Blanco puro
+              "#F8F8FF", // Blanco fantasma
+              "#F5F5DC", // Beige
+              "#FFF8DC", // Blanco maíz
+              "#E6E6FA", // Lavanda
+              "#F0F8FF", // Azul alice
+              "#F0FFFF", // Azure
+              "#F5FFFA", // Menta crema
+              "#D3D3D3", // Gris claro
+              "#C0C0C0", // Plata
+              "#A9A9A9", // Gris oscuro
+              "#808080", // Gris
+              "#696969", // Gris tenue
+              "#2F4F4F", // Gris pizarra oscuro
+              "#708090", // Gris pizarra
+              "#778899", // Gris pizarra claro
+              "#87CEEB", // Azul cielo
+              "#4682B4", // Azul acero
+              "#1E90FF", // Azul dodger
+              "#0000CD", // Azul medio
+              "#000080", // Azul marino
+              "#191970", // Azul medianoche
+              "#6495ED", // Azul maíz
+              "#4169E1", // Azul real
+              "#98FB98", // Verde pálido
+              "#90EE90", // Verde claro
+              "#00FF7F", // Verde primavera
+              "#32CD32", // Verde lima
+              "#228B22", // Verde bosque
+              "#006400", // Verde oscuro
+              "#9ACD32", // Verde amarillo
+              "#7CFC00", // Verde césped
+              "#FFB6C1", // Rosa claro
+              "#FFA07A", // Salmón claro
+              "#FA8072", // Salmón
+              "#E9967A", // Salmón oscuro
+              "#F08080", // Coral claro
+              "#CD5C5C", // Rojo indio
+              "#DC143C", // Carmesí
+              "#B22222", // Ladrillo
+              "#FFFFE0", // Amarillo claro
+              "#FFFF00", // Amarillo
+              "#FFD700", // Oro
+              "#FFA500", // Naranja
+              "#FF8C00", // Naranja oscuro
+              "#FF6347", // Tomate
+              "#FF4500", // Rojo naranja
+              "#FF0000", // Rojo
+              "#DEB887", // Madera
+              "#D2B48C", // Bronceado
+              "#BC8F8F", // Rosa marrón
+              "#F4A460", // Marrón arena
+              "#DAA520", // Vara de oro
+              "#B8860B", // Vara de oro oscuro
+              "#CD853F", // Perú
+              "#A0522D", // Siena
+              "#8B4513", // Marrón silla
+              "#800000", // Granate
+              "#654321", // Marrón oscuro
+              "#5D4037", // Marrón chocolate
+              "#3E2723", // Marrón café
+              "#1B1B1B", // Casi negro
             ].map((color, index) => (
               <div
                 key={index}
@@ -493,17 +530,17 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white shadow-xl p-6">
-              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Colores Cálidos</h3>
+              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Blancos y Neutros</h3>
               <div className="grid grid-cols-4 gap-2 mb-4">
-                {["#FF3535", "#FF5757", "#FF7979", "#FFB6B6", "#FF8C35", "#FFAE57", "#FFD079", "#FFE2B6"].map(
+                {["#FFFFFF", "#F8F8FF", "#F5F5DC", "#FFF8DC", "#E6E6FA", "#F0F8FF", "#F0FFFF", "#F5FFFA"].map(
                   (color, index) => (
                     <div key={index} className="aspect-square shadow-sm" style={{ backgroundColor: color }}></div>
                   ),
                 )}
               </div>
               <p className="text-gray-600 mb-4 font-mulish">
-                Perfectos para crear ambientes acogedores y estimulantes. Ideales para salas de estar, comedores y
-                espacios sociales.
+                Perfectos para ampliar espacios y crear ambientes luminosos. Ideales para techos, paredes principales y
+                espacios pequeños.
               </p>
               <Link href="#" className="text-primary font-kanit font-medium hover:underline inline-flex items-center">
                 Ver colección
@@ -512,16 +549,16 @@ export default function Home() {
             </div>
 
             <div className="bg-white shadow-xl p-6">
-              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Colores Fríos</h3>
+              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Azules</h3>
               <div className="grid grid-cols-4 gap-2 mb-4">
-                {["#3535FF", "#5757FF", "#7979FF", "#B6B6FF", "#35FFFF", "#57FFFF", "#79FFFF", "#B6FFFF"].map(
+                {["#87CEEB", "#4682B4", "#1E90FF", "#0000CD", "#000080", "#191970", "#6495ED", "#4169E1"].map(
                   (color, index) => (
                     <div key={index} className="aspect-square shadow-sm" style={{ backgroundColor: color }}></div>
                   ),
                 )}
               </div>
               <p className="text-gray-600 mb-4 font-mulish">
-                Ideales para crear ambientes relajantes y tranquilos. Perfectos para dormitorios, baños y espacios de
+                Ideales para crear ambientes relajantes y frescos. Perfectos para dormitorios, baños y espacios de
                 descanso.
               </p>
               <Link href="#" className="text-primary font-kanit font-medium hover:underline inline-flex items-center">
@@ -531,16 +568,16 @@ export default function Home() {
             </div>
 
             <div className="bg-white shadow-xl p-6">
-              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Colores Neutros</h3>
+              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Grises</h3>
               <div className="grid grid-cols-4 gap-2 mb-4">
-                {["#F9F9F9", "#E9E9E9", "#DADADA", "#BCBCBC", "#9E9E9E", "#757575", "#616161", "#252628"].map(
+                {["#D3D3D3", "#C0C0C0", "#A9A9A9", "#808080", "#696969", "#2F4F4F", "#708090", "#778899"].map(
                   (color, index) => (
                     <div key={index} className="aspect-square shadow-sm" style={{ backgroundColor: color }}></div>
                   ),
                 )}
               </div>
               <p className="text-gray-600 mb-4 font-mulish">
-                Versátiles y atemporales. Perfectos como base para cualquier espacio o para combinar con colores más
+                Versátiles y elegantes. Perfectos como base para cualquier espacio o para combinar con colores más
                 vibrantes.
               </p>
               <Link href="#" className="text-primary font-kanit font-medium hover:underline inline-flex items-center">
@@ -552,27 +589,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white shadow-xl p-6">
-              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Tendencias 2025</h3>
+              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Verdes</h3>
               <div className="grid grid-cols-4 gap-2 mb-4">
-                {["#FF35FF", "#FF57FF", "#FF79FF", "#FFB6FF", "#8C35FF", "#AE57FF", "#D079FF", "#E2B6FF"].map(
-                  (color, index) => (
-                    <div key={index} className="aspect-square shadow-sm" style={{ backgroundColor: color }}></div>
-                  ),
-                )}
-              </div>
-              <p className="text-gray-600 mb-4 font-mulish">
-                Los colores que marcarán tendencia este año. Atrevidos, modernos y llenos de personalidad.
-              </p>
-              <Link href="#" className="text-primary font-kanit font-medium hover:underline inline-flex items-center">
-                Ver colección
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="bg-white shadow-xl p-6">
-              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Colores Naturales</h3>
-              <div className="grid grid-cols-4 gap-2 mb-4">
-                {["#35FF35", "#57FF57", "#79FF79", "#B6FFB6", "#FFFF35", "#FFFF57", "#FFFF79", "#FFFFB6"].map(
+                {["#98FB98", "#90EE90", "#00FF7F", "#32CD32", "#228B22", "#006400", "#9ACD32", "#7CFC00"].map(
                   (color, index) => (
                     <div key={index} className="aspect-square shadow-sm" style={{ backgroundColor: color }}></div>
                   ),
@@ -581,6 +600,24 @@ export default function Home() {
               <p className="text-gray-600 mb-4 font-mulish">
                 Inspirados en la naturaleza. Perfectos para crear ambientes frescos, vitales y conectados con el
                 exterior.
+              </p>
+              <Link href="#" className="text-primary font-kanit font-medium hover:underline inline-flex items-center">
+                Ver colección
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="bg-white shadow-xl p-6">
+              <h3 className="text-2xl font-kanit font-bold mb-4 text-secondary">Tierras y Marrones</h3>
+              <div className="grid grid-cols-4 gap-2 mb-4">
+                {["#DEB887", "#D2B48C", "#BC8F8F", "#F4A460", "#DAA520", "#CD853F", "#A0522D", "#8B4513"].map(
+                  (color, index) => (
+                    <div key={index} className="aspect-square shadow-sm" style={{ backgroundColor: color }}></div>
+                  ),
+                )}
+              </div>
+              <p className="text-gray-600 mb-4 font-mulish">
+                Colores cálidos y acogedores. Ideales para crear ambientes rústicos, elegantes y con personalidad.
               </p>
               <Link href="#" className="text-primary font-kanit font-medium hover:underline inline-flex items-center">
                 Ver colección
