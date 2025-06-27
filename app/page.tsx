@@ -163,8 +163,8 @@ export default function Home() {
             {/* Promoción Principal - Ocupa 2 columnas */}
             <div className="md:col-span-2 bg-gradient-to-b from-[#FB3234] to-[#C81E1E] text-white p-8 relative overflow-hidden min-h-[300px] flex flex-col justify-center">
               <div className="relative z-10">
-                <h3 className="text-3xl font-kanit font-bold mb-4">Creá momentos especiales</h3>
-                <p className="text-lg font-mulish mb-6">Sorprendelo con el mejor regalo</p>
+                <h3 className="text-3xl font-kanit font-bold mb-4">Ofertas que enamoran</h3>
+                <p className="text-lg font-mulish mb-6">Aprovechá nuestras promos limitadas antes que se agoten!</p>
                 <div className="bg-white text-red-500 px-4 py-2 inline-block mb-4">
                   <span className="text-3xl font-kanit font-bold">40% OFF</span>
                 </div>
@@ -185,7 +185,7 @@ export default function Home() {
             {/* Calefacción */}
             <div className="bg-gradient-to-br from-teal-400 to-teal-500 text-white p-6 relative overflow-hidden min-h-[300px] flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-kanit font-bold mb-4">Calefacción</h3>
+                <h3 className="text-2xl font-kanit font-bold mb-4">Interiores</h3>
                 <div className="bg-white text-teal-500 px-3 py-1 inline-block mb-2">
                   <span className="text-2xl font-kanit font-bold">30% OFF</span>
                 </div>
@@ -202,8 +202,8 @@ export default function Home() {
             {/* Banco Provincia */}
             <div className="bg-gradient-to-br from-orange-400 to-orange-500 text-white p-6 flex flex-col justify-center items-center text-center min-h-[200px]">
               <div className="bg-white text-orange-500 p-4 mb-4 w-full">
-                <h3 className="text-lg font-kanit font-bold mb-2">Banco Provincia</h3>
-                <div className="text-4xl font-kanit font-bold text-gray-700">4</div>
+                <h3 className="text-lg font-kanit font-bold mb-2">Tarjeta Naranja</h3>
+                <div className="text-4xl font-kanit font-bold text-gray-700">3</div>
                 <div className="text-lg font-kanit font-bold text-gray-700">cuotas sin interés</div>
               </div>
             </div>
@@ -212,9 +212,9 @@ export default function Home() {
             <div className="md:col-span-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 relative overflow-hidden min-h-[250px] flex items-center">
               <div className="w-1/2">
                 <div className="bg-orange-400 text-white px-3 py-1 inline-block mb-2 text-sm font-kanit font-bold">
-                  ¡LANZAMIENTO!
+                  PRE VENTA
                 </div>
-                <h3 className="text-3xl font-kanit font-bold mb-2">¿Textura o color?</h3>
+                <h3 className="text-3xl font-kanit font-bold mb-2">¿Látex o Sintético?</h3>
                 <p className="text-xl font-kanit font-bold mb-4">Elegí los dos.</p>
               </div>
               <div className="w-1/2 flex justify-center">
@@ -234,7 +234,7 @@ export default function Home() {
             {/* Todas las opciones de látex */}
             <div className="bg-gradient-to-b from-[#FB3234] to-[#C81E1E] text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-kanit font-bold mb-4">Todas las opciones de látex</h3>
+                <h3 className="text-xl font-kanit font-bold mb-4">Látex para elegir el que quieras</h3>
                 <div className="bg-orange-500 text-white px-3 py-1 inline-block mb-2 text-sm">
                   Desde $29.990 + hasta 6 cuotas sin interés
                 </div>
@@ -247,7 +247,7 @@ export default function Home() {
             {/* Preparación de superficies */}
             <div className="bg-gradient-to-br from-red-400 to-red-500 text-white p-6 relative overflow-hidden min-h-[250px] flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-kanit font-bold mb-4">Preparación de superficies</h3>
+                <h3 className="text-xl font-kanit font-bold mb-4">Superficies relucientes para tu hogar</h3>
                 <div className="bg-orange-500 text-white px-3 py-1 inline-block mb-2 text-sm">
                   Desde $26.990 + hasta 6 cuotas sin interés
                 </div>
@@ -340,7 +340,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-kanit font-bold mb-6 text-secondary">
-              Expertos en color desde hace más de 20 años
+              Expertos en Color desde hace más de 20 años
             </h2>
             <p className="text-lg text-gray-600 font-mulish">
               Todo Color Pinturerías se ha convertido en la cadena de pinturerías más grande de Mendoza y Cuyo,
@@ -555,7 +555,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/piscinas-2.jpeg')] bg-cover bg-center opacity-10"></div>
         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-kanit font-bold text-white mb-6">
-            ENVÍOS A TODO MENDOZA Y 7 SUCURSALES
+            ENVÍOS A TODO MENDOZA + 7 SUCURSALES
           </h2>
           <p className="text-white text-xl mb-10 max-w-3xl mx-auto font-mulish">
             ¡Todo lo que necesitás a tu alcance! Armá tu pedido y lo llevamos a tu casa. ¡Fácil, rápido y seguro!

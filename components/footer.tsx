@@ -149,7 +149,7 @@ export default function Footer() {
                 <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
               </h3>
               <p className="text-white/90 mb-4 font-mulish">
-                Suscríbete a nuestro boletín para recibir las últimas novedades y promociones.
+                Suscríbete para recibir las últimas novedades y promociones.
               </p>
               <form className="flex flex-col space-y-3">
                 <input
