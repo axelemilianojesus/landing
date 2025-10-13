@@ -59,19 +59,19 @@ export default function NewsPage() {
   ]
 
   return (
-    <div className="container-custom py-12 md:py-16">
-      <div className="max-w-3xl mx-auto text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Novedades</h1>
-        <p className="text-lg text-gray-600">
+    <div className="container-custom py-16 md:py-24">
+      <div className="max-w-3xl mx-auto text-center mb-16">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">Novedades</h1>
+        <p className="text-lg text-gray-700">
           Mantente al día con las últimas noticias, tendencias y promociones de Todo Color Pinturerías.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
         {news.map((item) => (
-          <article key={item.id} className="bg-white rounded-lg shadow-sm overflow-hidden group">
+          <article key={item.id} className="bg-white rounded-lg shadow-md hover:shadow-xl overflow-hidden group">
             <Link href={`/novedades/${item.slug}`} className="block">
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
@@ -79,13 +79,13 @@ export default function NewsPage() {
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+              <div className="p-8">
+                <div className="flex items-center text-sm text-gray-600 mb-4">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>{item.date}</span>
                 </div>
-                <h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{item.title}</h2>
-                <p className="text-gray-600 mb-4">{item.excerpt}</p>
+                <h2 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors">{item.title}</h2>
+                <p className="text-gray-700 mb-6">{item.excerpt}</p>
                 <div className="inline-flex items-center text-primary font-medium">
                   Leer más
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -96,23 +96,23 @@ export default function NewsPage() {
         ))}
       </div>
 
-      <div className="mt-16 bg-gray-50 rounded-lg p-8">
-        <div className="max-w-3xl mx-auto text-center mb-8">
-          <h2 className="text-3xl font-semibold mb-4">Suscríbete a nuestro Boletín</h2>
+      <div className="mt-24 bg-gray-100 rounded-lg p-12">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-4xl font-semibold mb-6">Suscríbete a nuestro Boletín</h2>
           <p className="text-lg text-gray-700">
             Recibe las últimas novedades, promociones y consejos directamente en tu correo electrónico.
           </p>
         </div>
 
         <div className="max-w-xl mx-auto">
-          <form className="flex flex-col sm:flex-row gap-3">
+          <form className="flex flex-col sm:flex-row gap-6">
             <input
               type="email"
               placeholder="Tu correo electrónico"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+              className="flex-1 px-4 py-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
               required
             />
-            <button type="submit" className="btn btn-primary whitespace-nowrap">
+            <button type="submit" className="btn btn-primary whitespace-nowrap text-lg font-semibold">
               Suscribirse
             </button>
           </form>

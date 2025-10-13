@@ -1,19 +1,25 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Phone, Clock } from "lucide-react"
+import { MapPin, Phone, Clock, ExternalLink, MessageSquare } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Sucursales de Pinturerías Todo Color en Mendoza",
+  description:
+    "Encuentra tu pinturería Todo Color más cercana. Tenemos 7 sucursales en Mendoza Capital, Godoy Cruz, Las Heras, Guaymallén, Luján de Cuyo y Maipú.",
+}
 
 export default function BranchesPage() {
   const branches = [
     {
       id: 1,
-      name: "Casa Central",
+      name: "Casa Central (Mendoza Capital)",
       address: "Av. Ejército de los Andes 358, Mendoza",
       phone: "3807903",
       phone2: "2615563094",
-      whatsapp: "+54 9 2616142848",
+      whatsapp: "5492616142848",
       email: "todocolorpinturerias@gmail.com",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      mapUrl: "#",
       image: "/images/local.jpeg",
     },
     {
@@ -21,8 +27,8 @@ export default function BranchesPage() {
       name: "Sucursal Godoy Cruz",
       address: "Av. San Martín Sur 567, Godoy Cruz, Mendoza",
       phone: "2616142848",
+      whatsapp: "5492616142848",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      mapUrl: "#",
       image: "/images/pintura-hogar.jpeg",
     },
     {
@@ -30,8 +36,8 @@ export default function BranchesPage() {
       name: "Sucursal Las Heras",
       address: "Av. Acceso Norte 890, Las Heras, Mendoza",
       phone: "2616142848",
+      whatsapp: "5492616142848",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      mapUrl: "#",
       image: "/images/pintura-hogar2.jpeg",
     },
     {
@@ -39,8 +45,8 @@ export default function BranchesPage() {
       name: "Sucursal Guaymallén",
       address: "Av. Acceso Este 1234, Guaymallén, Mendoza",
       phone: "2616142848",
+      whatsapp: "5492616142848",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      mapUrl: "#",
       image: "/images/pintura-industrial.jpeg",
     },
     {
@@ -48,17 +54,17 @@ export default function BranchesPage() {
       name: "Sucursal Luján de Cuyo",
       address: "Av. San Martín 456, Luján de Cuyo, Mendoza",
       phone: "2616142848",
+      whatsapp: "5492616142848",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      mapUrl: "#",
       image: "/images/pintura-home-03.jpeg",
     },
     {
       id: 6,
-      name: "Sucursal Maipú",
+      name: "Sucursal Maipú Centro",
       address: "Av. Ozamis Sur 789, Maipú, Mendoza",
       phone: "2616142848",
+      whatsapp: "5492616142848",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      mapUrl: "#",
       image: "/images/wooden-paint-brushes.jpeg",
     },
     {
@@ -66,18 +72,22 @@ export default function BranchesPage() {
       name: "Sucursal Maipú",
       address: "Ozamis, Almte. Brown y, M5511 Maipú, Mendoza",
       phone: "0261 692-7926",
-      whatsapp: "+54 9 261 614-2848",
+      whatsapp: "5492616142848",
       email: "todocolorpinturerias@gmail.com",
       hours: "De 9 a 13hs. / de 15 a 19hs. // Sab: 9 a 13 hs.",
-      mapUrl: "#",
       image: "/images/piscinas-2.jpeg",
     },
   ]
 
+  const getGoogleMapsUrl = (address: string) =>
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
+
   return (
     <div className="container mx-auto px-4 md:px-8 max-w-7xl py-12 md:py-16 pt-32">
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-kanit font-bold mb-4 text-secondary">Red de Sucursales</h1>
+        <h1 className="text-4xl md:text-5xl font-kanit font-bold mb-4 text-secondary">
+          Nuestras Pinturerías en Mendoza
+        </h1>
         <p className="text-lg text-gray-600 font-mulish">
           La cadena de pinturerías más grande de Mendoza, con 7 sucursales estratégicamente ubicadas para estar siempre
           cerca tuyo.
@@ -88,57 +98,50 @@ export default function BranchesPage() {
       <div className="mb-16 bg-white shadow-xl overflow-hidden">
         <div className="grid md:grid-cols-2 gap-0">
           <div className="h-64 md:h-auto relative">
-            <Image src={branches[0].image || "/placeholder.svg"} alt={branches[0].name} fill className="object-cover" />
+            <Image
+              src={branches[0].image || "/placeholder.svg"}
+              alt={`Fachada de ${branches[0].name}`}
+              fill
+              className="object-cover"
+            />
           </div>
-          <div className="p-8">
-            <h2 className="text-3xl font-kanit font-bold mb-4 text-secondary">{branches[0].name}</h2>
-            <div className="space-y-4 font-mulish">
+          <div className="p-12">
+            <h2 className="text-4xl md:text-5xl font-kanit font-bold mb-6 text-secondary">{branches[0].name}</h2>
+            <div className="space-y-6 font-mulish">
               <div className="flex items-start">
-                <MapPin className="w-5 h-5 text-primary mr-3 mt-1 shrink-0" />
-                <p className="text-gray-700">{branches[0].address}</p>
+                <MapPin className="w-6 h-6 text-primary mr-4 mt-2 shrink-0" />
+                <p className="text-gray-800">{branches[0].address}</p>
               </div>
               <div className="flex items-start">
-                <Phone className="w-5 h-5 text-primary mr-3 mt-1 shrink-0" />
+                <Phone className="w-6 h-6 text-primary mr-4 mt-2 shrink-0" />
                 <div>
-                  <p className="text-gray-700">{branches[0].phone}</p>
-                  <p className="text-gray-700">{branches[0].phone2}</p>
-                  <p className="text-gray-700">{branches[0].whatsapp}</p>
+                  <p className="text-gray-800">{branches[0].phone}</p>
+                  {branches[0].phone2 && <p className="text-gray-800">{branches[0].phone2}</p>}
                 </div>
               </div>
               <div className="flex items-start">
-                <Clock className="w-5 h-5 text-primary mr-3 mt-1 shrink-0" />
-                <p className="text-gray-700">{branches[0].hours}</p>
+                <Clock className="w-6 h-6 text-primary mr-4 mt-2 shrink-0" />
+                <p className="text-gray-800">{branches[0].hours}</p>
               </div>
             </div>
-            <div className="mt-6 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-6">
               <Link
-                href={`https://wa.me/${branches[0].whatsapp?.replace(/\s/g, "")}`}
-                className="inline-flex items-center justify-center text-sm font-kanit font-medium bg-primary text-white hover:bg-primary-dark h-10 py-2 px-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                href={`https://wa.me/${branches[0].whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center text-sm font-kanit font-medium bg-primary text-white hover:bg-primary-dark h-12 py-3 px-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
+                <MessageSquare className="w-5 h-5 mr-2" />
                 WhatsApp
               </Link>
               <Link
-                href={branches[0].mapUrl}
+                href={getGoogleMapsUrl(branches[0].address)}
                 className="inline-flex items-center text-primary font-kanit font-medium hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Ver en el mapa
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="ml-1"
-                >
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
+                <ExternalLink className="ml-1 w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -146,51 +149,42 @@ export default function BranchesPage() {
       </div>
 
       {/* Otras Sucursales */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {branches.slice(1).map((branch) => (
-          <div key={branch.id} className="bg-white shadow-lg overflow-hidden">
-            <div className="h-48 bg-gray-200 relative">
-              <Image src={branch.image || "/placeholder.svg"} alt={branch.name} fill className="object-cover" />
+          <div key={branch.id} className="bg-white shadow-lg hover:shadow-2xl overflow-hidden flex flex-col">
+            <div className="h-64 bg-gray-200 relative">
+              <Image
+                src={branch.image || "/placeholder.svg"}
+                alt={`Fachada de la pinturería ${branch.name}`}
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="p-6">
-              <h2 className="text-xl font-kanit font-semibold mb-4 text-secondary">{branch.name}</h2>
-              <div className="space-y-3 font-mulish">
+            <div className="p-8 flex flex-col flex-grow">
+              <h3 className="text-2xl md:text-3xl font-kanit font-semibold mb-6 text-secondary">{branch.name}</h3>
+              <div className="space-y-4 font-mulish flex-grow">
                 <div className="flex items-start">
-                  <MapPin className="w-5 h-5 text-primary mr-3 mt-1 shrink-0" />
+                  <MapPin className="w-5 h-5 text-primary mr-4 mt-2 shrink-0" />
                   <p className="text-gray-700">{branch.address}</p>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="w-5 h-5 text-primary mr-3 mt-1 shrink-0" />
+                  <Phone className="w-5 h-5 text-primary mr-4 mt-2 shrink-0" />
                   <p className="text-gray-700">{branch.phone}</p>
                 </div>
                 <div className="flex items-start">
-                  <Clock className="w-5 h-5 text-primary mr-3 mt-1 shrink-0" />
+                  <Clock className="w-5 h-5 text-primary mr-4 mt-2 shrink-0" />
                   <p className="text-gray-700">{branch.hours}</p>
                 </div>
               </div>
-              <div className="mt-6">
+              <div className="mt-8">
                 <Link
-                  href={branch.mapUrl}
+                  href={getGoogleMapsUrl(branch.address)}
                   className="inline-flex items-center text-primary font-kanit font-medium hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Ver en el mapa
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="ml-1"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
+                  <ExternalLink className="ml-1 w-5 h-5" />
                 </Link>
               </div>
             </div>
@@ -209,12 +203,14 @@ export default function BranchesPage() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <div className="bg-white p-6 shadow-lg">
-              <h3 className="text-xl font-kanit font-semibold mb-4 text-secondary">Información de Envíos</h3>
-              <ul className="space-y-3 font-mulish">
+            <div className="bg-white p-8 shadow-lg">
+              <h3 className="text-2xl md:text-3xl font-kanit font-semibold mb-6 text-secondary">
+                Información de Envíos
+              </h3>
+              <ul className="space-y-5 font-mulish">
                 <li className="flex items-start">
-                  <div className="mr-4 mt-1">
-                    <div className="w-6 h-6 bg-primary flex items-center justify-center">
+                  <div className="mr-5 mt-2">
+                    <div className="w-8 h-8 bg-primary flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -232,12 +228,12 @@ export default function BranchesPage() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-gray-700">Envíos a toda la provincia de Mendoza</p>
+                    <p className="text-gray-800">Envíos a toda la provincia de Mendoza</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="mr-4 mt-1">
-                    <div className="w-6 h-6 bg-primary flex items-center justify-center">
+                  <div className="mr-5 mt-2">
+                    <div className="w-8 h-8 bg-primary flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -255,12 +251,12 @@ export default function BranchesPage() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-gray-700">Tiempos de entrega según zona (consultar)</p>
+                    <p className="text-gray-800">Tiempos de entrega según zona (consultar)</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="mr-4 mt-1">
-                    <div className="w-6 h-6 bg-primary flex items-center justify-center">
+                  <div className="mr-5 mt-2">
+                    <div className="w-8 h-8 bg-primary flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -278,12 +274,12 @@ export default function BranchesPage() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-gray-700">Envíos gratis en compras superiores a cierto monto (consultar)</p>
+                    <p className="text-gray-800">Envíos gratis en compras superiores a cierto monto (consultar)</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="mr-4 mt-1">
-                    <div className="w-6 h-6 bg-primary flex items-center justify-center">
+                  <div className="mr-5 mt-2">
+                    <div className="w-8 h-8 bg-primary flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -301,15 +297,15 @@ export default function BranchesPage() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-gray-700">Seguimiento de pedido vía WhatsApp</p>
+                    <p className="text-gray-800">Seguimiento de pedido vía WhatsApp</p>
                   </div>
                 </li>
               </ul>
 
-              <div className="mt-6">
+              <div className="mt-8">
                 <Link
                   href="https://wa.me/2616142848"
-                  className="inline-flex items-center justify-center text-sm font-kanit font-medium bg-primary text-white hover:bg-primary-dark h-10 py-2 px-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="inline-flex items-center justify-center text-sm font-kanit font-medium bg-primary text-white hover:bg-primary-dark h-12 py-3 px-6 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

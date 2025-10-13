@@ -1,78 +1,96 @@
-import Image from "next/image"
-import Link from "next/link"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+"use client"
+
+import type React from "react"
+import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react"
+import { useState } from "react"
 
 export default function ContactPage() {
+  const [formState, setFormState] = useState({ status: "idle", message: "" })
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setFormState({ status: "loading", message: "" })
+
+    // Simulación de envío de formulario
+    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    // Simulación de éxito
+    setFormState({ status: "success", message: "¡Gracias por tu mensaje! Nos pondremos en contacto a la brevedad." })
+    ;(event.target as HTMLFormElement).reset()
+
+    // Para volver al estado inicial después de un tiempo
+    setTimeout(() => setFormState({ status: "idle", message: "" }), 5000)
+  }
+
   return (
     <div className="pt-32 pb-20">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-5xl font-kanit font-bold mb-6 text-secondary">Contacto</h1>
-          <p className="text-lg text-gray-600 font-mulish">
-            Por consultas o presupuestos. Respondemos a la brevedad. Tenemos stock, precios y variedad. ¡Consúltenos!
+          <h1 className="text-5xl font-kanit font-bold mb-6 text-secondary">Contacto y Asesoramiento</h1>
+          <p className="text-lg text-gray-700 font-mulish">
+            Por consultas o presupuestos para tu proyecto de pintura. Respondemos a la brevedad. Tenemos stock, los
+            mejores precios y variedad. ¡Consúltenos!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <div className="bg-white p-8 shadow-xl border-b-4 border-primary h-full">
+            <div className="bg-gray-50 p-8 shadow-xl border-b-4 border-primary h-full">
               <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
                 Información de Contacto
-                <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                <span className="absolute bottom-0 left-0 w-20 h-1 bg-primary"></span>
               </h2>
 
               <div className="space-y-8 font-mulish">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <MapPin className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Dirección</h3>
-                    <p className="text-gray-600">7 Sucursales en Mendoza</p>
-                    <p className="text-gray-600">Consultá ubicaciones en la sección Sucursales</p>
+                    <p className="text-gray-700">7 Sucursales en Mendoza</p>
+                    <p className="text-gray-700">Consultá ubicaciones en la sección Sucursales</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Teléfono</h3>
-                    <p className="text-gray-600">2616142848</p>
+                    <p className="text-gray-700">2616142848</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <Mail className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Email</h3>
-                    <p className="text-gray-600">info@todocolorpinturerias.com.ar</p>
+                    <p className="text-gray-700">info@todocolorpinturerias.com.ar</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <Clock className="w-6 h-6 text-white" />
+                    <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Horarios de Atención</h3>
-                    <p className="text-gray-600">Lunes a Viernes: 8:30 - 18:00</p>
-                    <p className="text-gray-600">Sábados: 8:30 - 13:00</p>
+                    <p className="text-gray-700">Lunes a Viernes: 8:30 - 18:00</p>
+                    <p className="text-gray-700">Sábados: 8:30 - 13:00</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
+                    <MessageSquare className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">WhatsApp</h3>
-                    <p className="text-gray-600">2616142848</p>
+                    <p className="text-gray-700">2616142848</p>
                   </div>
                 </div>
               </div>
@@ -116,84 +134,97 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <form className="bg-white p-8 shadow-xl border-b-4 border-primary">
+            <form onSubmit={handleSubmit} className="bg-white p-8 shadow-xl border-b-4 border-primary">
               <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
                 Envíanos un mensaje
-                <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                <span className="absolute bottom-0 left-0 w-20 h-1 bg-primary"></span>
               </h2>
 
               <div className="grid gap-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-kanit font-medium text-gray-700 mb-1">
+                    <label htmlFor="name" className="block text-base font-kanit font-medium text-gray-700 mb-1">
                       Nombre
                     </label>
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary font-mulish"
+                      name="name"
+                      className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-mulish"
                       placeholder="Tu nombre"
                       required
+                      aria-label="Nombre"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-kanit font-medium text-gray-700 mb-1">
+                    <label htmlFor="email" className="block text-base font-kanit font-medium text-gray-700 mb-1">
                       Email
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary font-mulish"
+                      name="email"
+                      className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-mulish"
                       placeholder="Tu email"
                       required
+                      aria-label="Email"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-kanit font-medium text-gray-700 mb-1">
+                  <label htmlFor="phone" className="block text-base font-kanit font-medium text-gray-700 mb-1">
                     Teléfono
                   </label>
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary font-mulish"
+                    name="phone"
+                    className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-mulish"
                     placeholder="Tu teléfono"
+                    aria-label="Teléfono"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-kanit font-medium text-gray-700 mb-1">
+                  <label htmlFor="subject" className="block text-base font-kanit font-medium text-gray-700 mb-1">
                     Asunto
                   </label>
                   <input
                     type="text"
                     id="subject"
-                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary font-mulish"
+                    name="subject"
+                    className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-mulish"
                     placeholder="Asunto de tu mensaje"
                     required
+                    aria-label="Asunto"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-kanit font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-base font-kanit font-medium text-gray-700 mb-1">
                     Mensaje
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary font-mulish"
+                    className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-mulish"
                     placeholder="Tu mensaje"
                     required
+                    aria-label="Mensaje"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-primary text-white font-kanit py-3 text-lg shadow-lg hover:bg-primary-dark transition-colors"
+                  className="bg-primary text-white font-kanit py-3 text-lg shadow-lg hover:bg-primary-dark transition-colors w-full disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  disabled={formState.status === "loading"}
                 >
-                  Enviar mensaje
+                  {formState.status === "loading" ? "Enviando..." : "Enviar mensaje"}
                 </button>
+                {formState.status === "success" && <p className="text-green-600 text-center">{formState.message}</p>}
+                {formState.status === "error" && <p className="text-red-600 text-center">{formState.message}</p>}
               </div>
             </form>
           </div>
@@ -201,59 +232,19 @@ export default function ContactPage() {
 
         <div className="mt-16">
           <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
-            Ubicación
-            <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+            Ubicación de Casa Central
+            <span className="absolute bottom-0 left-0 w-20 h-1 bg-primary"></span>
           </h2>
           <div className="bg-white shadow-xl h-96 overflow-hidden">
-            {/* Aquí se podría integrar un mapa de Google Maps */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-100">
-              <p className="text-gray-600 text-lg font-mulish">Mapa de ubicaciones de nuestras sucursales</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Seguinos TC Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
-            Seguinos TC
-            <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
-          </h2>
-
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2">
-              <Image
-                src="/images/seguinos-TC.png"
-                alt="Todo Color - Seguinos TC"
-                width={400}
-                height={400}
-                className="mx-auto"
-              />
-            </div>
-
-            <div className="md:w-1/2">
-              <h3 className="text-2xl font-kanit font-semibold mb-4 text-secondary">¿Cómo podemos ayudarte?</h3>
-              <p className="text-gray-600 mb-6 font-mulish">
-                Nuestro equipo de expertos está listo para asesorarte en tu próximo proyecto. Contáctanos por WhatsApp y
-                recibe atención personalizada.
-              </p>
-
-              <Link
-                href="https://wa.me/2616142848"
-                className="inline-flex items-center justify-center text-sm font-kanit font-medium bg-primary text-white hover:bg-primary-dark h-12 py-3 px-6 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="mr-3"
-                >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg>
-                Contactar por WhatsApp
-              </Link>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.083553971239!2d-68.8571688848146!3d-32.8963289809358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090f3f23a9a7%3A0xabe4c71e2a333acd!2sAv.%20Ej%C3%A9rcito%20de%20los%20Andes%20358%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1626885681365!5m2!1ses!2sar"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              title="Ubicación de Todo Color Pinturerías Casa Central"
+            ></iframe>
           </div>
         </div>
       </div>
