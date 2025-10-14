@@ -45,57 +45,34 @@ export default function Home() {
       {/* Metro Grid - Promotional Banners */}
       <section className="py-16 md:py-28 bg-gray-50">
         <div className="container-custom">
-          {/* First row - Full width on mobile, 2 columns on larger screens */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
+          {/* MOBILE: Optimized vertical layout */}
+          <div className="md:hidden">
             {/* Banner Grande - Ofertas Especiales */}
-            <div className="md:col-span-2 lg:col-span-2 lg:row-span-2 bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 md:p-10 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+            <div className="mb-6 bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
               <div className="absolute inset-0 z-0">
                 <Image src="/images/pintura-home-03.jpeg" alt="Promoción" fill className="object-cover opacity-40" />
               </div>
               <div className="relative z-10">
-                <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 md:mb-6">
-                  <span className="font-maven font-bold text-white text-xs md:text-sm">PROMOCIÓN ESPECIAL</span>
+                <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                  <span className="font-maven font-bold text-white text-xs">PROMOCIÓN ESPECIAL</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-maven font-bold text-white mb-3 md:mb-4">
-                  Aprovechá las mejores ofertas
-                </h2>
-                <p className="text-lg md:text-xl text-white/95 mb-6 md:mb-8 font-mulish">
+                <h2 className="text-3xl font-maven font-bold text-white mb-3">Aprovechá las mejores ofertas</h2>
+                <p className="text-lg text-white/95 mb-6 font-mulish">
                   Descuentos de hasta 40% en productos seleccionados
                 </p>
-                <div className="inline-flex items-center bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-xl font-maven font-bold text-2xl md:text-3xl shadow-xl mb-4 md:mb-6">
-                  <Tag className="w-6 h-6 md:w-8 md:h-8 mr-2 md:mr-3" />
+                <div className="inline-flex items-center bg-white text-primary px-6 py-3 rounded-xl font-maven font-bold text-2xl shadow-xl mb-4">
+                  <Tag className="w-6 h-6 mr-2" />
                   40% OFF
                 </div>
-                <div className="bg-blue-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-xl inline-block">
-                  <span className="font-maven font-bold text-base md:text-lg block">6 cuotas sin interés</span>
-                  <span className="text-xs md:text-sm opacity-90 font-mulish">con tarjetas seleccionadas</span>
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-xl inline-block">
+                  <span className="font-maven font-bold text-base block">6 cuotas sin interés</span>
+                  <span className="text-xs opacity-90 font-mulish">con tarjetas seleccionadas</span>
                 </div>
               </div>
             </div>
 
-            {/* Banner - Látex - Hidden on mobile, shown on md+ */}
-            <div className="hidden md:block md:col-span-2 lg:col-span-2 bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 md:p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
-              <div className="absolute inset-0 z-0">
-                <Image src="/images/pintura-hogar.jpeg" alt="Látex" fill className="object-cover opacity-40" />
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-maven font-bold text-white mb-3 md:mb-4">
-                  Látex para todos los ambientes
-                </h3>
-                <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg inline-block mb-3 md:mb-4">
-                  <span className="text-white font-maven font-bold text-sm md:text-base">Desde $29.990</span>
-                </div>
-                <button className="bg-white text-primary px-5 md:px-6 py-2 md:py-3 rounded-lg font-maven font-semibold hover:bg-gray-100 transition-colors duration-300 ease-in-out text-sm md:text-base">
-                  Ver más
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Second row - 2 columns on all devices */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {/* Banner - Látex - Only on mobile */}
-            <div className="md:hidden col-span-2 bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+            {/* Banner - Látex */}
+            <div className="mb-6 bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
               <div className="absolute inset-0 z-0">
                 <Image src="/images/pintura-hogar.jpeg" alt="Látex" fill className="object-cover opacity-40" />
               </div>
@@ -110,49 +87,130 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Banner - Impermeabilizantes */}
-            <div className="lg:col-span-1 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-5 md:p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
-              <div className="absolute inset-0 z-0">
-                <Image
-                  src="/images/piscinas-2.jpeg"
-                  alt="Impermeabilizantes"
-                  fill
-                  className="object-cover opacity-40"
-                />
+            {/* Bottom row - 2 columns */}
+            <div className="grid grid-cols-2 gap-4">
+              {/* Banner - Impermeabilizantes */}
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-5 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/piscinas-2.jpeg"
+                    alt="Impermeabilizantes"
+                    fill
+                    className="object-cover opacity-40"
+                  />
+                </div>
+                <div className="relative z-10">
+                  <h3 className="text-lg font-maven font-bold text-white mb-2">Impermeabilizantes</h3>
+                  <p className="text-white/90 mb-3 font-mulish text-xs">Protege del agua y la humedad</p>
+                  <div className="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-lg inline-block">
+                    <span className="text-white font-maven font-bold text-base">30% OFF</span>
+                  </div>
+                </div>
               </div>
-              <div className="relative z-10">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-maven font-bold text-white mb-2 md:mb-3">
-                  Impermeabilizantes
-                </h3>
-                <p className="text-white/90 mb-3 md:mb-4 font-mulish text-xs md:text-sm lg:text-base">
-                  Protege del agua y la humedad
+
+              {/* Banner - Revestimientos */}
+              <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-5 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/wooden-paint-brushes.jpeg"
+                    alt="Revestimientos"
+                    fill
+                    className="object-cover opacity-40"
+                  />
+                </div>
+                <div className="relative z-10">
+                  <h3 className="text-lg font-maven font-bold text-white mb-2">Revestimientos</h3>
+                  <p className="text-white/90 mb-3 font-mulish text-xs">Dale textura y color a tus paredes</p>
+                  <button className="bg-white text-amber-700 px-3 py-1.5 rounded-lg font-maven font-semibold text-xs hover:bg-gray-100 transition-colors duration-300 ease-in-out">
+                    Ver más
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* DESKTOP: 2-column layout as shown in screenshot */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 lg:gap-8">
+            {/* LEFT COLUMN: Large promotional banner (full height) */}
+            <div className="row-span-2 bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 lg:p-12 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image src="/images/pintura-home-03.jpeg" alt="Promoción" fill className="object-cover opacity-40" />
+              </div>
+              <div className="relative z-10 h-full flex flex-col justify-center">
+                <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 w-fit">
+                  <span className="font-maven font-bold text-white text-sm">PROMOCIÓN ESPECIAL</span>
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-maven font-bold text-white mb-4">
+                  Aprovechá las mejores ofertas
+                </h2>
+                <p className="text-xl text-white/95 mb-8 font-mulish">
+                  Descuentos de hasta 40% en productos seleccionados
                 </p>
-                <div className="bg-white/20 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-lg inline-block">
-                  <span className="text-white font-maven font-bold text-base md:text-lg lg:text-xl">30% OFF</span>
+                <div className="inline-flex items-center bg-white text-primary px-8 py-4 rounded-xl font-maven font-bold text-3xl shadow-xl mb-6 w-fit">
+                  <Tag className="w-8 h-8 mr-3" />
+                  40% OFF
+                </div>
+                <div className="bg-blue-600 text-white px-6 py-3 rounded-xl inline-block w-fit">
+                  <span className="font-maven font-bold text-lg block">6 cuotas sin interés</span>
+                  <span className="text-sm opacity-90 font-mulish">con tarjetas seleccionadas</span>
                 </div>
               </div>
             </div>
 
-            {/* Banner - Revestimientos */}
-            <div className="lg:col-span-1 bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-5 md:p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+            {/* RIGHT COLUMN TOP: Látex banner */}
+            <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
               <div className="absolute inset-0 z-0">
-                <Image
-                  src="/images/wooden-paint-brushes.jpeg"
-                  alt="Revestimientos"
-                  fill
-                  className="object-cover opacity-40"
-                />
+                <Image src="/images/pintura-hogar.jpeg" alt="Látex" fill className="object-cover opacity-40" />
               </div>
               <div className="relative z-10">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-maven font-bold text-white mb-2 md:mb-3">
-                  Revestimientos
-                </h3>
-                <p className="text-white/90 mb-3 md:mb-4 font-mulish text-xs md:text-sm lg:text-base">
-                  Dale textura y color a tus paredes
-                </p>
-                <button className="bg-white text-amber-700 px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-maven font-semibold text-xs md:text-sm hover:bg-gray-100 transition-colors duration-300 ease-in-out">
+                <h3 className="text-3xl font-maven font-bold text-white mb-4">Látex para todos los ambientes</h3>
+                <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg inline-block mb-4">
+                  <span className="text-white font-maven font-bold text-base">Desde $29.990</span>
+                </div>
+                <button className="bg-white text-primary px-6 py-3 rounded-lg font-maven font-semibold hover:bg-gray-100 transition-colors duration-300 ease-in-out text-base">
                   Ver más
                 </button>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN BOTTOM: 2 smaller banners side by side */}
+            <div className="grid grid-cols-2 gap-6 lg:gap-8">
+              {/* Impermeabilizantes */}
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 lg:p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/piscinas-2.jpeg"
+                    alt="Impermeabilizantes"
+                    fill
+                    className="object-cover opacity-40"
+                  />
+                </div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-maven font-bold text-white mb-3">Impermeabilizantes</h3>
+                  <p className="text-white/90 mb-4 font-mulish text-base">Protege del agua y la humedad</p>
+                  <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg inline-block">
+                    <span className="text-white font-maven font-bold text-xl">30% OFF</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Revestimientos */}
+              <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-6 lg:p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/wooden-paint-brushes.jpeg"
+                    alt="Revestimientos"
+                    fill
+                    className="object-cover opacity-40"
+                  />
+                </div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-maven font-bold text-white mb-3">Revestimientos</h3>
+                  <p className="text-white/90 mb-4 font-mulish text-base">Dale textura y color a tus paredes</p>
+                  <button className="bg-white text-amber-700 px-4 py-2 rounded-lg font-maven font-semibold text-sm hover:bg-gray-100 transition-colors duration-300 ease-in-out">
+                    Ver más
+                  </button>
+                </div>
               </div>
             </div>
           </div>
