@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative text-white pt-48 pb-32 overflow-hidden">
+      <section className="relative text-white pt-48 pb-32 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/sucursal-todocolor.jpeg"
@@ -19,27 +19,27 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent"></div>
         </div>
-        <div className="container-custom relative z-10 hero-content">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-maven font-bold mb-8 leading-tight">
+        <div className="container-custom relative z-10">
+          <div className="max-w-2xl bg-white/90 backdrop-blur-md p-10 rounded-xl shadow-xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-maven font-bold mb-6 leading-tight text-gray-800">
               La cadena de pinturerías líder en Mendoza
             </h1>
-            <p className="text-xl md:text-2xl text-white/95 mb-12 font-mulish font-light">
+            <p className="text-lg md:text-xl text-gray-700 mb-10 font-mulish">
               Especialistas con más de 20 años de experiencia. 7 sucursales para estar siempre cerca tuyo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contacto"
-                className="inline-flex items-center justify-center font-maven font-semibold bg-white text-primary hover:bg-gray-50 h-14 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-lg"
+                className="inline-flex items-center justify-center font-maven font-semibold bg-primary text-white hover:bg-primary-dark h-12 px-7 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-base"
               >
                 Asesoramiento Gratuito
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 href="/sucursales"
-                className="inline-flex items-center justify-center font-maven font-semibold border-2 border-white text-white hover:bg-white/10 h-14 px-8 rounded-lg transition-all duration-300 ease-in-out text-lg"
+                className="inline-flex items-center justify-center font-maven font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white h-12 px-7 rounded-lg transition-all duration-300 ease-in-out text-base"
               >
                 Ver Sucursales
               </Link>
