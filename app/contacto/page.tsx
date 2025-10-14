@@ -3,6 +3,7 @@
 import type React from "react"
 import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({ status: "idle", message: "" })
@@ -26,7 +27,7 @@ export default function ContactPage() {
     <div className="pt-32 pb-20">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-5xl font-kanit font-bold mb-6 text-secondary">Contacto y Asesoramiento</h1>
+          <h1 className="text-5xl font-maven font-bold mb-6 text-gray-800">Contacto y Asesoramiento</h1>
           <p className="text-lg text-gray-700 font-mulish">
             Por consultas o presupuestos para tu proyecto de pintura. Respondemos a la brevedad. Tenemos stock, los
             mejores precios y variedad. ¡Consúltenos!
@@ -36,7 +37,7 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <div className="bg-gray-50 p-8 shadow-xl border-b-4 border-primary h-full">
-              <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
+              <h2 className="text-3xl font-maven font-semibold mb-8 pb-3 relative inline-block text-gray-800">
                 Información de Contacto
                 <span className="absolute bottom-0 left-0 w-20 h-1 bg-primary"></span>
               </h2>
@@ -44,10 +45,10 @@ export default function ContactPage() {
               <div className="space-y-8 font-mulish">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <MapPin className="w-6 h-6 text-primary" />
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Dirección</h3>
+                    <h3 className="text-xl font-maven font-medium mb-2 text-gray-800">Dirección</h3>
                     <p className="text-gray-700">7 Sucursales en Mendoza</p>
                     <p className="text-gray-700">Consultá ubicaciones en la sección Sucursales</p>
                   </div>
@@ -55,30 +56,30 @@ export default function ContactPage() {
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <Phone className="w-6 h-6 text-primary" />
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Teléfono</h3>
+                    <h3 className="text-xl font-maven font-medium mb-2 text-gray-800">Teléfono</h3>
                     <p className="text-gray-700">2616142848</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <Mail className="w-6 h-6 text-primary" />
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Email</h3>
+                    <h3 className="text-xl font-maven font-medium mb-2 text-gray-800">Email</h3>
                     <p className="text-gray-700">info@todocolorpinturerias.com.ar</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <Clock className="w-6 h-6 text-primary" />
+                    <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">Horarios de Atención</h3>
+                    <h3 className="text-xl font-maven font-medium mb-2 text-gray-800">Horarios de Atención</h3>
                     <p className="text-gray-700">Lunes a Viernes: 8:30 - 18:00</p>
                     <p className="text-gray-700">Sábados: 8:30 - 13:00</p>
                   </div>
@@ -86,17 +87,17 @@ export default function ContactPage() {
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary flex items-center justify-center shadow-lg mr-4">
-                    <MessageSquare className="w-6 h-6 text-primary" />
+                    <MessageSquare className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-kanit font-medium mb-2 text-secondary">WhatsApp</h3>
+                    <h3 className="text-xl font-maven font-medium mb-2 text-gray-800">WhatsApp</h3>
                     <p className="text-gray-700">2616142848</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-10">
-                <h3 className="text-xl font-kanit font-semibold mb-4 text-secondary">Síguenos</h3>
+                <h3 className="text-xl font-maven font-semibold mb-4 text-gray-800">Síguenos</h3>
                 <div className="flex space-x-4">
                   <a
                     href="#"
@@ -133,9 +134,26 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div>
-            <form onSubmit={handleSubmit} className="bg-white p-8 shadow-xl border-b-4 border-primary">
-              <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
+          <div className="relative">
+            {/* Mascot positioned organically */}
+            <div className="absolute -top-20 -right-4 md:-right-8 z-10 hidden md:block">
+              <div className="relative w-32 h-32 lg:w-40 lg:h-40">
+                <Image
+                  src="/images/mascot-painter.png"
+                  alt="Todo Color Mascot - Experto en pintura"
+                  fill
+                  className="object-contain drop-shadow-2xl animate-bounce-slow"
+                />
+              </div>
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border-2 border-primary">
+                <p className="text-primary font-maven font-bold text-sm whitespace-nowrap">
+                  ¡Estoy aquí para ayudarte!
+                </p>
+              </div>
+            </div>
+
+            <form onSubmit={handleSubmit} className="bg-white p-8 shadow-xl border-b-4 border-primary relative">
+              <h2 className="text-3xl font-maven font-semibold mb-8 pb-3 relative inline-block text-gray-800">
                 Envíanos un mensaje
                 <span className="absolute bottom-0 left-0 w-20 h-1 bg-primary"></span>
               </h2>
@@ -143,7 +161,7 @@ export default function ContactPage() {
               <div className="grid gap-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-base font-kanit font-medium text-gray-700 mb-1">
+                    <label htmlFor="name" className="block text-base font-maven font-medium text-gray-700 mb-1">
                       Nombre
                     </label>
                     <input
@@ -157,7 +175,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-base font-kanit font-medium text-gray-700 mb-1">
+                    <label htmlFor="email" className="block text-base font-maven font-medium text-gray-700 mb-1">
                       Email
                     </label>
                     <input
@@ -173,7 +191,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-base font-kanit font-medium text-gray-700 mb-1">
+                  <label htmlFor="phone" className="block text-base font-maven font-medium text-gray-700 mb-1">
                     Teléfono
                   </label>
                   <input
@@ -187,7 +205,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-base font-kanit font-medium text-gray-700 mb-1">
+                  <label htmlFor="subject" className="block text-base font-maven font-medium text-gray-700 mb-1">
                     Asunto
                   </label>
                   <input
@@ -202,7 +220,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-base font-kanit font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-base font-maven font-medium text-gray-700 mb-1">
                     Mensaje
                   </label>
                   <textarea
@@ -218,20 +236,24 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="bg-primary text-white font-kanit py-3 text-lg shadow-lg hover:bg-primary-dark transition-colors w-full disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  className="bg-primary text-white font-maven py-3 text-lg shadow-lg hover:bg-primary-dark transition-colors w-full disabled:bg-gray-400 disabled:cursor-not-allowed"
                   disabled={formState.status === "loading"}
                 >
                   {formState.status === "loading" ? "Enviando..." : "Enviar mensaje"}
                 </button>
-                {formState.status === "success" && <p className="text-green-600 text-center">{formState.message}</p>}
-                {formState.status === "error" && <p className="text-red-600 text-center">{formState.message}</p>}
+                {formState.status === "success" && (
+                  <p className="text-green-600 text-center font-mulish">{formState.message}</p>
+                )}
+                {formState.status === "error" && (
+                  <p className="text-red-600 text-center font-mulish">{formState.message}</p>
+                )}
               </div>
             </form>
           </div>
         </div>
 
         <div className="mt-16">
-          <h2 className="text-3xl font-kanit font-semibold mb-8 pb-3 relative inline-block text-secondary">
+          <h2 className="text-3xl font-maven font-semibold mb-8 pb-3 relative inline-block text-gray-800">
             Ubicación de Casa Central
             <span className="absolute bottom-0 left-0 w-20 h-1 bg-primary"></span>
           </h2>

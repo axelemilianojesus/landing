@@ -188,28 +188,6 @@ html {
   }
 }
 
-/* hero-bg class removed or commented out */
-/* .hero-bg {
-  background: linear-gradient(135deg, #fb3234 0%, #c81e1e 100%);
-  position: relative;
-}
-
-.hero-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(251, 50, 52, 0.95), rgba(200, 30, 30, 0.95));
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-} */
-
 @layer utilities {
   .transition-all {
     @apply transition-all duration-300 ease-in-out;
@@ -225,5 +203,19 @@ html {
 
   .smooth-transition {
     transition: all 0.3s ease-in-out;
+  }
+
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
   }
 }
