@@ -22,8 +22,8 @@ export default function AboutPage() {
       <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <Image
-            src="/images/local.jpeg"
-            alt="Interior de una de las pinturerías de Todo Color en Mendoza"
+            src="/images/sucursal-todocolor.jpeg"
+            alt="Fachada de Todo Color Pinturerías - Casa Central en Mendoza"
             width={600}
             height={400}
             className="rounded-lg shadow-md"

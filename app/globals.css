@@ -42,9 +42,6 @@ html {
   --sidebar-accent-foreground: #1e3a8a;
   --sidebar-border: #e5e7eb;
   --sidebar-ring: #3b82f6;
-  --font-sans: "Inter", "Inter Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
-  --font-serif: "Source Serif 4", "Source Serif 4 Fallback";
   --shadow-x: 0px;
   --shadow-y: 1px;
   --shadow-blur: 2px;
@@ -191,7 +188,8 @@ html {
   }
 }
 
-.hero-bg {
+/* hero-bg class removed or commented out */
+/* .hero-bg {
   background: linear-gradient(135deg, #fb3234 0%, #c81e1e 100%);
   position: relative;
 }
@@ -210,7 +208,7 @@ html {
 .hero-content {
   position: relative;
   z-index: 2;
-}
+} */
 
 @layer utilities {
   .transition-all {

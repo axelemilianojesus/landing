@@ -20,7 +20,7 @@ export default function BranchesPage() {
       whatsapp: "5492616142848",
       email: "todocolorpinturerias@gmail.com",
       hours: "Lunes a Viernes: 8:30 - 18:00, Sábados: 8:30 - 13:00",
-      image: "/images/local.jpeg",
+      image: "/images/sucursal-todocolor.jpeg", // Updated image
     },
     {
       id: 2,

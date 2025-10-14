@@ -182,7 +182,7 @@ export default function ProductPage() {
                 </button>
               </div>
 
-              <button className="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-maven font-bold text-lg h-14 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+              <button className="flex-1 bg-primary hover:bg-primary-dark text-white font-maven font-bold text-lg h-14 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
                 <ShoppingCart className="w-5 h-5" />
                 AGREGAR AL CARRITO
               </button>
@@ -191,23 +191,111 @@ export default function ProductPage() {
             {/* Payment Options */}
             <div className="space-y-3 border-t border-gray-200 pt-8">
               <h3 className="font-maven font-bold text-lg text-gray-800 mb-4">Opciones de pago</h3>
-              {installments.map((option, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <span className="text-2xl">{option.logo}</span>
+              <div className="space-y-3">
+                {/* BBV */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center shrink-0 shadow-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect x="2" y="5" width="20" height="14" rx="2" />
+                      <line x1="2" y1="10" x2="22" y2="10" />
+                    </svg>
+                  </div>
                   <div className="flex-1 font-mulish">
-                    <span className="font-semibold text-gray-800">
-                      {option.cuotas} cuotas sin interés
-                      {option.total > 0 && ` total con reintegro incluido $${option.total.toLocaleString("es-AR")}`}
-                    </span>
-                    {option.bank !== "Banco Provincia" && (
-                      <div className="text-sm text-gray-600">con {option.bank}</div>
-                    )}
-                    {option.bank === "Banco Provincia" && (
-                      <div className="text-sm text-gray-600">con {option.bank}</div>
-                    )}
+                    <div className="font-semibold text-gray-800 mb-1">6 cuotas sin interés</div>
+                    <div className="text-sm text-gray-600">Total con reintegro incluido: $3.980</div>
+                    <div className="text-sm text-primary font-medium mt-1">con BBV</div>
                   </div>
                 </div>
-              ))}
+
+                {/* Banco Naranja -> Changed to red */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center shrink-0 shadow-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect x="2" y="5" width="20" height="14" rx="2" />
+                      <line x1="2" y1="10" x2="22" y2="10" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 font-mulish">
+                    <div className="font-semibold text-gray-800 mb-1">3 cuotas sin interés</div>
+                    <div className="text-sm text-gray-600">Total con reintegro incluido: $4.201</div>
+                    <div className="text-sm text-primary font-medium mt-1">con Banco Naranja</div>
+                  </div>
+                </div>
+
+                {/* Banco Rojo */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center shrink-0 shadow-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect x="2" y="5" width="20" height="14" rx="2" />
+                      <line x1="2" y1="10" x2="22" y2="10" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 font-mulish">
+                    <div className="font-semibold text-gray-800 mb-1">3 cuotas sin interés</div>
+                    <div className="text-sm text-gray-600">Total con reintegro incluido: $3.980</div>
+                    <div className="text-sm text-primary font-medium mt-1">con Banco Rojo</div>
+                  </div>
+                </div>
+
+                {/* Banco Provincia */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shrink-0 shadow-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M3 21h18" />
+                      <path d="M5 21V7l8-4v18" />
+                      <path d="M19 21V11l-6-4" />
+                      <path d="M9 9v.01" />
+                      <path d="M9 12v.01" />
+                      <path d="M9 15v.01" />
+                      <path d="M9 18v.01" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 font-mulish">
+                    <div className="font-semibold text-gray-800 mb-1">4 cuotas sin interés</div>
+                    <div className="text-sm text-primary font-medium mt-1">con Banco Provincia</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Action Buttons */}

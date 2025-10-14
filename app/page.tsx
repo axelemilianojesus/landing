@@ -10,7 +10,17 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative hero-bg text-white pt-48 pb-32 overflow-hidden">
+      <section className="relative text-white pt-48 pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/sucursal-todocolor.jpeg"
+            alt="Todo Color Pinturerías - Casa Central"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-primary/80"></div>
+        </div>
         <div className="container-custom relative z-10 hero-content">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-maven font-bold mb-8 leading-tight">

@@ -24,6 +24,12 @@ export interface Product {
   coverage: string
   dryingTime: string
   relatedProducts?: string[]
+  installments?: {
+    bank: string
+    cuotas: number
+    total: number
+    color: string
+  }[]
 }
 
 export const products: Product[] = [
@@ -67,6 +73,12 @@ export const products: Product[] = [
     coverage: "12-14 m² por litro por mano",
     dryingTime: "Al tacto: 30 min | Entre manos: 2 horas",
     relatedProducts: ["2", "5", "10"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "2",
@@ -107,6 +119,12 @@ export const products: Product[] = [
     coverage: "8-10 m² por litro por mano",
     dryingTime: "Al tacto: 1 hora | Entre manos: 4 horas",
     relatedProducts: ["3", "9", "4"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "3",
@@ -145,6 +163,12 @@ export const products: Product[] = [
     coverage: "10-12 m² por litro por mano",
     dryingTime: "Al tacto: 45 min | Entre manos: 3 horas",
     relatedProducts: ["2", "9", "1"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "4",
@@ -192,6 +216,12 @@ export const products: Product[] = [
     coverage: "1-1.5 kg por m² en 2 manos",
     dryingTime: "Al tacto: 2 horas | Entre manos: 6 horas",
     relatedProducts: ["2", "9", "3"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "5",
@@ -232,6 +262,12 @@ export const products: Product[] = [
     coverage: "12-14 m² por litro por mano",
     dryingTime: "Al tacto: 30 min | Entre manos: 2 horas",
     relatedProducts: ["1", "6", "10"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "6",
@@ -272,6 +308,12 @@ export const products: Product[] = [
     coverage: "12-14 m² por litro por mano",
     dryingTime: "Al tacto: 30 min | Entre manos: 2 horas",
     relatedProducts: ["1", "5", "7"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "7",
@@ -312,6 +354,12 @@ export const products: Product[] = [
     coverage: "12-14 m² por litro por mano",
     dryingTime: "Al tacto: 30 min | Entre manos: 2 horas",
     relatedProducts: ["6", "8", "1"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "8",
@@ -352,6 +400,12 @@ export const products: Product[] = [
     coverage: "12-14 m² por litro por mano",
     dryingTime: "Al tacto: 30 min | Entre manos: 2 horas",
     relatedProducts: ["6", "7", "5"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "9",
@@ -396,6 +450,12 @@ export const products: Product[] = [
     coverage: "8-10 m² por litro por mano",
     dryingTime: "Al tacto: 1 hora | Entre manos: 4 horas",
     relatedProducts: ["2", "4", "3"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
   {
     id: "10",
@@ -442,6 +502,12 @@ export const products: Product[] = [
     coverage: "12-14 m² por litro por mano",
     dryingTime: "Al tacto: 30 min | Entre manos: 2 horas",
     relatedProducts: ["1", "3", "6"],
+    installments: [
+      { bank: "BBV", cuotas: 6, total: 3980, color: "amber" },
+      { bank: "Banco Naranja", cuotas: 3, total: 4201, color: "primary" },
+      { bank: "Banco Rojo", cuotas: 3, total: 3980, color: "red" },
+      { bank: "Banco Provincia", cuotas: 4, total: 0, color: "blue" },
+    ],
   },
 ]
 
