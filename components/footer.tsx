@@ -289,6 +289,21 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Sherwin Williams Distributor Badge */}
+      <div className="py-8 md:py-12 bg-blue-900 border-t border-blue-800">
+        <div className="container-custom">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+            <div className="relative w-32 h-16 md:w-40 md:h-20">
+              <Image src="/images/sherwin-williams-logo.png" alt="Sherwin Williams" fill className="object-contain" />
+            </div>
+            <div className="text-center md:text-left">
+              <div className="text-white font-maven font-bold text-lg md:text-xl mb-1">Distribuidores Oficiales</div>
+              <div className="text-white/80 font-mulish text-sm md:text-base">Pinturas Premium Sherwin-Williams</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-[#1f2937] py-6">
         <div className="container-custom text-center text-sm font-mulish text-white/80">
           <p>© {new Date().getFullYear()} Todo Color Pinturerías. Todos los derechos reservados.</p>
