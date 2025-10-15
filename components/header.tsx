@@ -50,12 +50,12 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center" aria-label="Inicio">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-blanco.png"
                 alt="Todo Color Pinturerías"
-                width={180}
-                height={60}
+                width={135}
+                height={45}
                 priority
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
 

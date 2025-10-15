@@ -520,35 +520,39 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-28 bg-white">
+      <section className="py-12 md:py-28 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-10">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-10">
             {[
               {
                 icon: MapPin,
-                title: "7 Sucursales en Mendoza",
+                title: "7 Sucursales",
+                subtitle: "en Mendoza",
                 description: "Estamos siempre cerca tuyo en toda la provincia de Mendoza",
               },
               {
                 icon: Truck,
-                title: "Envíos a Domicilio",
+                title: "Envíos a",
+                subtitle: "Domicilio",
                 description: "Llevamos tu pedido donde lo necesites de forma rápida y segura",
               },
               {
                 icon: Clock,
-                title: "Retiro Rápido",
+                title: "Retiro",
+                subtitle: "Rápido",
                 description: "Comprá online y retirá en 2 horas en cualquier sucursal",
               },
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-4 md:p-12 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1"
+                className="bg-white p-2 md:p-12 rounded-lg md:rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1"
               >
-                <div className="w-12 h-12 md:w-20 md:h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-3 md:mb-6 mx-auto md:mx-0">
-                  <feature.icon className="w-6 h-6 md:w-10 md:h-10 text-primary" />
+                <div className="w-8 h-8 md:w-20 md:h-20 bg-primary/10 rounded-lg md:rounded-2xl flex items-center justify-center mb-1.5 md:mb-6 mx-auto md:mx-0">
+                  <feature.icon className="w-4 h-4 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h3 className="text-sm md:text-2xl font-maven font-bold mb-0 md:mb-4 text-gray-800 text-center md:text-left">
+                <h3 className="text-[14px] md:text-2xl font-maven font-light md:font-bold text-gray-800 text-center md:text-left leading-tight">
                   {feature.title}
+                  <span className="block">{feature.subtitle}</span>
                 </h3>
                 <p className="text-gray-600 font-mulish leading-relaxed text-sm md:text-base hidden md:block">
                   {feature.description}
