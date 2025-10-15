@@ -94,7 +94,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-2">Experiencia</h3>
             <p className="text-gray-800">
-              Contamos con años de experiencia en el mercado, lo que nos permite ofrecer el mejor asesoramiento y
+              Contamos con 50 años de experiencia en el mercado, lo que nos permite ofrecer el mejor asesoramiento y
               soluciones para cada proyecto.
             </p>
           </div>

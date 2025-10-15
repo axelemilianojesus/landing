@@ -297,7 +297,7 @@ export default function Footer() {
               <Image src="/images/sherwin-williams-logo.png" alt="Sherwin Williams" fill className="object-contain" />
             </div>
             <div className="text-center md:text-left">
-              <div className="text-white font-maven font-bold text-lg md:text-xl mb-1">Distribuidores Oficiales</div>
+              <div className="text-white font-maven font-bold text-lg md:text-xl mb-1">Distribuidores Certificados</div>
               <div className="text-white/80 font-mulish text-sm md:text-base">Pinturas Premium Sherwin-Williams</div>
             </div>
           </div>
