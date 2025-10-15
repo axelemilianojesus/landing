@@ -31,10 +31,10 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <div className="text-[10px] md:text-xs font-maven font-bold text-blue-900 uppercase tracking-tight leading-none">
-                  Distribuidores
+                  Distribuidor
                 </div>
                 <div className="text-[10px] md:text-xs font-maven font-bold text-blue-900 uppercase tracking-tight leading-none">
-                  Oficiales
+                  certificado
                 </div>
               </div>
             </div>
@@ -137,10 +137,10 @@ export default function Home() {
               <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-5 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
                 <div className="absolute inset-0 z-0">
                   <Image
-                    src="/images/sherwin-williams-colores.webp"
-                    alt="Sherwin Williams Colores"
+                    src="/images/revestimientos-sherwin-williams.jpg"
+                    alt="Revestimientos Sherwin Williams"
                     fill
-                    className="object-cover opacity-50"
+                    className="object-cover opacity-40"
                   />
                 </div>
                 <div className="relative z-10">
@@ -228,10 +228,10 @@ export default function Home() {
               <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-6 lg:p-8 relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] shadow-lg">
                 <div className="absolute inset-0 z-0">
                   <Image
-                    src="/images/sherwin-williams-colores.webp"
-                    alt="Sherwin Williams Colores"
+                    src="/images/revestimientos-sherwin-williams.jpg"
+                    alt="Revestimientos Sherwin Williams"
                     fill
-                    className="object-cover opacity-50"
+                    className="object-cover opacity-40"
                   />
                 </div>
                 <div className="relative z-10">
@@ -292,7 +292,7 @@ export default function Home() {
                 </div>
 
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-maven font-bold mb-2 md:mb-3 text-white leading-tight">
-                  Distribuidores Oficiales
+                  Distribuidor certificado
                   <span className="block text-amber-400 mt-1">Sherwin-Williams</span>
                 </h2>
 
