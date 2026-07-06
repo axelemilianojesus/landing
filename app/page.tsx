@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MapPin, Truck, Clock, Award, ShieldCheck, Users, Tag } from "lucide-react"
 import { products } from "@/lib/products"
+import ColorPalette from "@/components/color-palette"
 
 export default function Home() {
   const featuredProducts = products.slice(0, 3)
@@ -349,6 +350,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Color Palette */}
+      <ColorPalette />
 
       {/* Features */}
       <section className="features-section">
