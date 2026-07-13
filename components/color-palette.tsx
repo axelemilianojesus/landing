@@ -175,9 +175,12 @@ const scenes: Scene[] = [
     title: "Piscina exterior",
     image: "/images/visualizer-pool.png",
     points: [
-      { x: 72, y: 55, label: "Paredes del hogar",  defaultHex: "#F4EFE6", defaultName: "Alabaster SW 7008" },
-      { x: 35, y: 75, label: "Deck / piso",         defaultHex: "#D4C5AE", defaultName: "Accessible Beige SW 7036" },
-      { x: 18, y: 45, label: "Borde de piscina",    defaultHex: "#C8D8E2", defaultName: "Rarified Air SW 6525" },
+      // Pared de la casa — zona superior derecha
+      { x: 78, y: 38, label: "Pared de la casa",  defaultHex: "#F4EFE6", defaultName: "Alabaster SW 7008" },
+      // Deck de piedra — franja horizontal inferior
+      { x: 50, y: 82, label: "Deck / piso",        defaultHex: "#D4C5AE", defaultName: "Accessible Beige SW 7036" },
+      // Interior del agua — zona central azul
+      { x: 30, y: 55, label: "Interior piscina",   defaultHex: "#C8D8E2", defaultName: "Rarified Air SW 6525" },
     ],
   },
   {
@@ -185,11 +188,16 @@ const scenes: Scene[] = [
     title: "Interior moderno",
     image: "/images/visualizer-interior.png",
     points: [
-      { x: 20, y: 35, label: "Pared principal",  defaultHex: "#EEE9E1", defaultName: "Pure White SW 7005" },
-      { x: 65, y: 28, label: "Pared lateral",    defaultHex: "#C2B9A7", defaultName: "Agreeable Gray SW 7029" },
-      { x: 78, y: 62, label: "Frente de cocina", defaultHex: "#3D6A87", defaultName: "Indigo Batik SW 7602" },
-      { x: 45, y: 80, label: "Zócalo / piso",    defaultHex: "#DEC48A", defaultName: "Pale Almond SW 6388" },
-      { x: 50, y: 15, label: "Cielorraso",        defaultHex: "#F5F4EF", defaultName: "Extra White SW 7006" },
+      // Pared izquierda — visible y amplia
+      { x: 14, y: 42, label: "Pared principal",  defaultHex: "#EEE9E1", defaultName: "Pure White SW 7005" },
+      // Pared del fondo — zona central superior
+      { x: 52, y: 30, label: "Pared del fondo",  defaultHex: "#C2B9A7", defaultName: "Agreeable Gray SW 7029" },
+      // Mueble / frente de cocina — zona derecha media
+      { x: 80, y: 58, label: "Frente de cocina", defaultHex: "#3D6A87", defaultName: "Indigo Batik SW 7602" },
+      // Piso — franja inferior
+      { x: 45, y: 85, label: "Piso",             defaultHex: "#DEC48A", defaultName: "Pale Almond SW 6388" },
+      // Cielorraso — franja superior central
+      { x: 50, y: 10, label: "Cielorraso",        defaultHex: "#F5F4EF", defaultName: "Extra White SW 7006" },
     ],
   },
   {
@@ -197,9 +205,12 @@ const scenes: Scene[] = [
     title: "Patio privado",
     image: "/images/visualizer-patio.png",
     points: [
-      { x: 25, y: 40, label: "Fachada principal", defaultHex: "#EDE3D2", defaultName: "Dover White SW 6385" },
-      { x: 68, y: 35, label: "Pared lateral",     defaultHex: "#C5D0C0", defaultName: "Patience SW 0054" },
-      { x: 50, y: 72, label: "Piso exterior",      defaultHex: "#C4A87A", defaultName: "Sand Dune SW 7547" },
+      // Fachada principal — superficie grande izquierda-centro
+      { x: 28, y: 45, label: "Fachada principal", defaultHex: "#EDE3D2", defaultName: "Dover White SW 6385" },
+      // Pared lateral / ala derecha
+      { x: 72, y: 38, label: "Pared lateral",     defaultHex: "#C5D0C0", defaultName: "Patience SW 0054" },
+      // Piso exterior — zona inferior
+      { x: 50, y: 80, label: "Piso exterior",      defaultHex: "#C4A87A", defaultName: "Sand Dune SW 7547" },
     ],
   },
 ]
