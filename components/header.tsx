@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="bg-primary shadow-sm">
       {/* Top Bar */}
-      <div className="bg-zinc-900 text-white py-3">
+      <div className="bg-secondary text-primary-foreground py-3">
         <div className="container-custom">
           <div className="flex items-center justify-between text-sm">
             <div className="hidden md:flex items-center gap-6">
@@ -45,7 +45,7 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <div className="py-4 bg-red-700">
+      <div className="py-4 bg-primary">
         <div className="container-custom">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center" aria-label="Inicio">
@@ -95,7 +95,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contacto"
-                className="inline-flex items-center justify-center font-maven font-semibold bg-white text-primary hover:bg-gray-100 h-11 px-6 rounded-lg shadow-md hover:shadow-lg transition-all uppercase tracking-wide"
+                className="inline-flex items-center justify-center font-maven font-semibold bg-primary-foreground text-primary hover:bg-muted h-11 px-6 rounded-lg shadow-md hover:shadow-lg transition-all uppercase tracking-wide"
               >
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Cotizar
@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-primary border-t shadow-lg">
+        <div className="lg:hidden bg-primary border-t border-primary-foreground/20 shadow-lg">
           <nav className="container-custom py-6 flex flex-col gap-4">
             <Link
               href="/"
@@ -154,7 +154,7 @@ export default function Header() {
             </Link>
             <Link
               href="/contacto"
-              className="inline-flex items-center justify-center font-maven font-semibold bg-white text-primary hover:bg-gray-100 h-11 px-6 rounded-lg shadow-md mt-2 uppercase tracking-wide"
+              className="inline-flex items-center justify-center font-maven font-semibold bg-primary-foreground text-primary hover:bg-muted h-11 px-6 rounded-lg shadow-md mt-2 uppercase tracking-wide"
               onClick={() => setIsMenuOpen(false)}
             >
               <ShoppingCart className="w-4 h-4 mr-2" />
