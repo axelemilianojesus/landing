@@ -25,7 +25,7 @@ export default function Footer() {
               <div className="flex space-x-4 mt-6">
                 <Link
                   href="#"
-                  className="w-10 h-10 bg-white/10 flex items-center justify-center rounded-lg hover:bg-primary hover:text-white transition-colors"
+                  className="w-10 h-10 bg-primary-foreground/10 text-primary-foreground flex items-center justify-center rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href="#"
-                  className="w-10 h-10 bg-white/10 flex items-center justify-center rounded-lg hover:bg-primary hover:text-white transition-colors"
+                  className="w-10 h-10 bg-primary-foreground/10 text-primary-foreground flex items-center justify-center rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-white text-primary font-maven font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="bg-primary-foreground text-primary font-maven font-semibold py-3 px-4 rounded-lg hover:bg-muted transition-colors"
                 >
                   Suscribirse
                 </button>
@@ -166,7 +166,7 @@ export default function Footer() {
               <div className="flex space-x-4 mt-6">
                 <Link
                   href="#"
-                  className="w-10 h-10 bg-white/10 flex items-center justify-center rounded-lg hover:bg-white hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-primary-foreground/10 text-primary-foreground flex items-center justify-center rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href="#"
-                  className="w-10 h-10 bg-white/10 flex items-center justify-center rounded-lg hover:bg-white hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-primary-foreground/10 text-primary-foreground flex items-center justify-center rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +279,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-white text-primary font-maven font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="bg-primary-foreground text-primary font-maven font-semibold py-3 px-4 rounded-lg hover:bg-muted transition-colors"
                 >
                   Suscribirse
                 </button>
@@ -290,7 +290,7 @@ export default function Footer() {
       </div>
 
       {/* Sherwin Williams Distributor Badge */}
-      <div className="py-8 md:py-12 bg-blue-900 border-t border-blue-800">
+      <div className="py-8 md:py-12 bg-secondary border-t border-border">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
             <div className="relative w-32 h-16 md:w-40 md:h-20">
@@ -304,8 +304,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#1f2937] py-6">
-        <div className="container-custom text-center text-sm font-mulish text-white/80">
+      <div className="bg-secondary py-6">
+        <div className="container-custom text-center text-sm font-mulish text-secondary-foreground/80">
           <p>© {new Date().getFullYear()} Todo Color Pinturerías. Todos los derechos reservados.</p>
         </div>
       </div>

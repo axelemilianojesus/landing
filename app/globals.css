@@ -2675,8 +2675,8 @@ html {
   width: 100%;
   padding: 10px 16px;
   margin-top: 8px;
-  background-color: #1e2d4d;
-  color: #ffffff;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
   font-size: 0.8125rem;
   font-weight: 600;
   border: none;
@@ -2686,18 +2686,18 @@ html {
 }
 
 .btn-apply-visualizer:hover {
-  background-color: #2a3d68;
+  background-color: color-mix(in srgb, var(--secondary) 85%, white);
 }
 
 /* ── VISUALIZADOR DE AMBIENTES ───────────────────────────────────────────────── */
 .color-visualizer-section {
-  background-color: #f8f7f4;
+  background-color: var(--muted);
   padding: 80px 0;
 }
 
 .section-badge-dark {
-  background-color: #1e2d4d;
-  color: #ffffff;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
   border: none;
 }
 
@@ -2711,10 +2711,10 @@ html {
 
 .visualizer-scene-tab {
   padding: 10px 24px;
-  border: 2px solid #e5e7eb;
+  border: 2px solid var(--border);
   border-radius: 50px;
-  background: #ffffff;
-  color: #374151;
+  background: var(--card);
+  color: var(--foreground);
   font-size: 0.9375rem;
   font-weight: 600;
   cursor: pointer;
@@ -2722,14 +2722,14 @@ html {
 }
 
 .visualizer-scene-tab:hover {
-  border-color: #d0332a;
-  color: #d0332a;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .visualizer-scene-tab-active {
-  background-color: #1e2d4d;
-  border-color: #1e2d4d;
-  color: #ffffff;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 /* Layout */
@@ -2775,7 +2775,7 @@ html {
 
 .visualizer-hint {
   font-size: 0.8125rem;
-  color: #9ca3af;
+  color: var(--muted-foreground);
   text-align: center;
 }
 
@@ -2797,7 +2797,7 @@ html {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid var(--background);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   transition: transform 0.2s, border-color 0.2s;
 }
@@ -2813,8 +2813,8 @@ html {
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  background: #1e2d4d;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
   border-radius: 8px;
   padding: 8px 12px;
   min-width: 160px;
@@ -2829,7 +2829,7 @@ html {
 .tooltip-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #cbd5e1;
+  color: var(--muted-foreground);
 }
 
 .tooltip-color {
@@ -2842,15 +2842,15 @@ html {
 .tooltip-name {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--secondary-foreground);
 }
 
 /* Panel lateral */
 .visualizer-points-panel {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 16px;
   padding: 24px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -2859,7 +2859,7 @@ html {
 .visualizer-points-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #1e2d4d;
+  color: var(--foreground);
   margin: 0;
 }
 
@@ -2875,20 +2875,20 @@ html {
   gap: 12px;
   padding: 12px 14px;
   border-radius: 10px;
-  border: 2px solid #e5e7eb;
-  background: #f9fafb;
+  border: 2px solid var(--border);
+  background: var(--muted);
   cursor: pointer;
   transition: border-color 0.2s, background-color 0.2s;
   text-align: left;
 }
 
 .visualizer-zone-item:hover {
-  border-color: #d0332a;
+  border-color: var(--primary);
 }
 
 .visualizer-zone-item-active {
-  border-color: #1e2d4d;
-  background: #f0f4ff;
+  border-color: var(--secondary);
+  background: var(--accent);
 }
 
 .zone-color-dot {
@@ -2896,7 +2896,7 @@ html {
   height: 32px;
   border-radius: 8px;
   flex-shrink: 0;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
 }
 
 .zone-info {
@@ -2910,12 +2910,12 @@ html {
 .zone-label {
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #374151;
+  color: var(--foreground);
 }
 
 .zone-color-name {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--muted-foreground);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2924,8 +2924,8 @@ html {
 .zone-active-badge {
   font-size: 0.6875rem;
   font-weight: 700;
-  background: #1e2d4d;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
   padding: 2px 8px;
   border-radius: 50px;
   flex-shrink: 0;
@@ -2933,7 +2933,7 @@ html {
 
 /* Instrucción + mini-paleta */
 .visualizer-instruction {
-  background: #f0f4ff;
+  background: var(--accent);
   border-radius: 10px;
   padding: 14px;
   display: flex;
@@ -2943,14 +2943,14 @@ html {
 
 .instruction-text {
   font-size: 0.8125rem;
-  color: #1e2d4d;
+  color: var(--accent-foreground);
   font-weight: 600;
   margin: 0;
 }
 
 .instruction-sub {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--muted-foreground);
   margin: 0;
 }
 
@@ -2971,7 +2971,7 @@ html {
 
 .quick-swatch:hover {
   transform: scale(1.2);
-  border-color: #1e2d4d;
+  border-color: var(--secondary);
 }
 
 /* CTA del visualizador */
@@ -2981,8 +2981,8 @@ html {
   justify-content: center;
   gap: 8px;
   padding: 14px 20px;
-  background-color: #d0332a;
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
   font-size: 0.9375rem;
   font-weight: 700;
   border-radius: 10px;
@@ -2992,5 +2992,5 @@ html {
 }
 
 .btn-visualizer-cta:hover {
-  background-color: #b02a22;
+  background-color: var(--primary-dark);
 }
